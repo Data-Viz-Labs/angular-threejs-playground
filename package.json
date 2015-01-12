@@ -1,0 +1,22 @@
+{
+  "name": "angular-threejs-playground",
+  "version": "0.0.1",
+  "description": "Some angular directives made from three.js website's examples",
+  "main": "server.js",
+  "scripts": {
+    "install": "bower install",
+    "start": "hs ./client",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular",
+    "three.js",
+    "directives"
+  ],
+  "author": "Pelirrojo@users.noreply.github.com",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "http-server": "^0.7.4"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "angular-threejs-playground",
+  "version": "0.0.1",
+  "authors": [
+    "Pelirrojo@users.noreply.github.com"
+  ],
+  "description": "Some angular directives made from three.js website's examples",
+  "main": "client/index.html",
+  "keywords": [
+    "angular",
+    "three.js",
+    "directives"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "bootstrap": "3",
+    "angular": "1.3",
+    "angular-ui-router": "~0.2.13",
+    "three.js": "*"
+  }
+}
