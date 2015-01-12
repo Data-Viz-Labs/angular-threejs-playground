@@ -16,6 +16,10 @@
   "author": "Pelirrojo@users.noreply.github.com",
   "license": "MIT",
   "private": true,
+   "repository": {
+    "type": "git",
+    "url": "https://github.com/Pelirrojo/angular-threejs-playground.git"
+  },
   "dependencies": {
     "http-server": "^0.7.4"
   }
