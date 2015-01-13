@@ -1,7 +1,7 @@
 # angular-threejs-playground
 Some angular directives made from three.js website's examples.
 
-A little angular app with ui-router, served by [http-server](https://github.com/nodeapps/http-server) a zero config node webserver.
+A little angular app with ui-router, served by [http-server](https://github.com/nodeapps/http-server), a favorite zero config cli webserver node-based.
 
 Simply type:
  1. `npm install`
