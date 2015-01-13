@@ -3,5 +3,5 @@ Some angular directives made from three.js website's examples
 
 Simply type:
 
- npm install
- npm start
+ 1. `npm install`
+ 2. `npm start`
