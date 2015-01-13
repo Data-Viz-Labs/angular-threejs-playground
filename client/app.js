@@ -13,7 +13,7 @@ Some angular directives made from three.js website's examples
 
 "use strict";
 
-var myapp = angular.module('angular-threejs-playground', ["ui.router"])
+var myapp = angular.module('angular-threejs-playground', ["ui.router","DataService"])
 
 
 /* Routing ****************************************************************** */
@@ -24,7 +24,8 @@ myapp.config(function($stateProvider, $urlRouterProvider) {
   
   $stateProvider
     .state('main', {
-        url: "/"
+        url: "/",
+        templateUrl: "home.html",
     })
     .state('chart1', {
         url: "/chart1",
@@ -38,7 +39,14 @@ myapp.config(function($stateProvider, $urlRouterProvider) {
     });
 
 /* Services ***************************************************************** */
-//myapp.
+myapp.module('DataService', ['$http'])
+.factory('DataService', function($http) {
+    
+  return $http.get('miserables.json',{ }, {
+    getData: {method:'GET', isArray: false}
+  });
+  
+});
 
 
 /* Directives *************************************************************** */

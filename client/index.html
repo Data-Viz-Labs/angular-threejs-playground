@@ -9,6 +9,19 @@
 
     <!-- Bootstrap -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        
+        body {
+          padding-top: 20px;
+          padding-bottom: 20px;
+        }
+        
+        .navbar {
+          margin-bottom: 20px;
+        }
+
+    </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -32,15 +45,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">angular-threejs-playground</a>
+                    <a class="navbar-brand" href="https://github.com/Pelirrojo/angular-threejs-playground">angular-threejs-playground</a>
                 </div>
 
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li ng-class="{active:$state.includes('main')}"><a href="#">Home</a>
-                        </li>
-                        <li ng-class="{active:$state.includes('chart1')}"><a ui-sref="chart1">Chart 1</a>
-                        </li>
+                        <li ng-class="{active:$state.includes('main')}"><a href="#/">Home</a></li>
+                        <li ng-class="{active:$state.includes('chart1')}"><a ui-sref="chart1">Chart 1</a></li>
                     </ul>
 
                 </div>
@@ -52,14 +63,11 @@
 
         <!-- Main component for a primary marketing message or call to action -->
         <div class="jumbotron">
-            <div class="row">
-                <ui-view/>
-            </div>
+            <ui-view/>
         </div>
 
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
-
 
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
         <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
