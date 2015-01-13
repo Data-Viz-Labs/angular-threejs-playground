@@ -38,8 +38,8 @@ myapp.config(function($stateProvider, $urlRouterProvider) {
     });
 
 /* Services ***************************************************************** */
-myapp.
+//myapp.
 
 
 /* Directives *************************************************************** */
-myapp.module
+//myapp.module
