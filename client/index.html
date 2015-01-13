@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
+    <title>angular-threejs-playground</title>
 
     <!-- Bootstrap -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -16,24 +16,44 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body class="container">
-      <p><i>Best viewed in pop-out mode to see location changes. Click blue button on the right.</i></p>
+  
+  <body>
+  <div class="container">
+      
+     <!-- Static navbar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Project name</a>
+          </div>
+          
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li ng-class="{active:$state.includes('main')}"><a href="#">Home</a></li>
+              <li ng-class="{active:$state.includes('chart1')}"><a ui-sref="chart1">Chart 1</a></li>
+            </ul>
+            
+          </div><!--/.nav-collapse -->
+          
+        </div><!--/.container-fluid -->
+      </nav>
 
-  <div class="navbar">
-    <div class="navbar-inner">
-      <a class="brand" href="#">Quick Start</a>
-      <ul class="nav">
-        <li><a ui-sref="route1">Route 1</a></li>
-        <li><a ui-sref="route2">Route 2</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="span12">
-      <div class="well" ui-view></div>        
-    </div>
-  </div>
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>Navbar example</h1>
+        <p>This example is a quick exercise to illustrate how the default, static navbar and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
+        <div class="well" ui-view></div>
+      </div>
+  
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -41,6 +61,6 @@
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     
     <script src="app.js"></script>
-    
+    </div>
   </body>
 </html>

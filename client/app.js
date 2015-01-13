@@ -14,34 +14,32 @@ Some angular directives made from three.js website's examples
 "use strict";
 
 var myapp = angular.module('angular-threejs-playground', ["ui.router"])
-    myapp.config(function($stateProvider, $urlRouterProvider){
-      
-      // For any unmatched url, send to /route1
-      $urlRouterProvider.otherwise("/route1")
-      
-      $stateProvider
-        .state('route1', {
-            url: "/route1",
-            templateUrl: "route1.html"
-        })
-          .state('route1.list', {
-              url: "/list",
-              templateUrl: "route1.list.html",
-              controller: function($scope){
-                $scope.items = ["A", "List", "Of", "Items"];
-              }
-          })
-          
-        .state('route2', {
-            url: "/route2",
-            templateUrl: "route2.html"
-        })
-          .state('route2.list', {
-              url: "/list",
-              templateUrl: "route2.list.html",
-              controller: function($scope){
-                $scope.things = ["A", "Set", "Of", "Things"];
-              }
-          })
+
+
+/* Routing ****************************************************************** */
+myapp.config(function($stateProvider, $urlRouterProvider) {
+  
+  // For any unmatched url, send to /route1
+  $urlRouterProvider.otherwise("/")
+  
+  $stateProvider
+    .state('main', {
+        url: "/"
+    })
+    .state('chart1', {
+        url: "/chart1",
+        templateUrl: "chart1.html",
+        controller: function($scope){
+            $scope.things = ["A", "Set", "Of", "Things"];
+          }
     });
- 
+}).run(function($rootScope, $state) {
+      $rootScope.$state = $state;
+    });
+
+/* Services ***************************************************************** */
+myapp.
+
+
+/* Directives *************************************************************** */
+myapp.module
