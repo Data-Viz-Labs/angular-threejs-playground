@@ -13,7 +13,7 @@ Some angular directives made from three.js website's examples
 
 "use strict";
 
-var myapp = angular.module('angular-threejs-playground', ["ui.router","DataService"])
+var myapp = angular.module('angular-threejs-playground', ["ui.router"])
 
 
 /* Routing ****************************************************************** */
@@ -36,18 +36,38 @@ myapp.config(function($stateProvider, $urlRouterProvider) {
     });
 }).run(function($rootScope, $state) {
       $rootScope.$state = $state;
-    });
-
-/* Services ***************************************************************** */
-myapp.module('DataService', ['$http'])
-.factory('DataService', function($http) {
-    
-  return $http.get('miserables.json',{ }, {
-    getData: {method:'GET', isArray: false}
-  });
-  
 });
 
 
+/* Controllers ************************************************************** */
+myapp
+.controller('GreetingController', ['$scope', function($scope) {
+  $scope.greeting = 'Hello World!';
+}]);
+
+
+/* Services ***************************************************************** */
+myapp.factory('DataService', ['$http', function($http) {
+   var msgs = [];
+   return function(msg) {
+     msgs.push(msg);
+     if (msgs.length == 3) {
+       win.alert(msgs.join("\n"));
+       msgs = [];
+     }
+   };
+ }]);
+
+
 /* Directives *************************************************************** */
-//myapp.module
+myapp.directive('atpWebglInteractiveDraggableCubes', function() {
+  return {
+    restrict: 'E',
+    scope: {},
+    template: '<div> a {{name}} </div>',
+    link: function (scope, element, attrs) {
+      scope.name = 'Jeff';
+    }
+  };
+});
+
