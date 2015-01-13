@@ -26,6 +26,7 @@
     "bootstrap": "3",
     "angular": "1.3",
     "angular-ui-router": "~0.2.13",
-    "three.js": "*"
+    "three.js": "*",
+    "three.js-controls": "*"
   }
 }
